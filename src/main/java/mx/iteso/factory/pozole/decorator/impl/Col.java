@@ -1,5 +1,6 @@
 package mx.iteso.factory.pozole.decorator.impl;
 
+import mx.iteso.factory.pozole.Meat;
 import mx.iteso.factory.pozole.Pozole;
 import mx.iteso.factory.pozole.decorator.TopingsDecorator;
 
@@ -30,6 +31,10 @@ public class Col extends TopingsDecorator{
     public String getBroth(){
         return this.pozole.getBroth();
     }
+	@Override
+    public Meat getMeat(){
+        return this.pozole.getMeat();
+    }
     
 	@Override
     public void setName(String n){
@@ -38,5 +43,9 @@ public class Col extends TopingsDecorator{
 	@Override
     public void setBroth(String b){
     	this.pozole.setBroth(b);
+    }
+	@Override
+    public void setMeat(Meat m){
+    	this.pozole.setMeat(m);
     }
 }
